@@ -165,7 +165,7 @@ Example result:
 - If Google returns `400 User location is not supported for the API use`, the Worker ran in an unsupported region. Pinning placement helped in one test: `"placement": { "region": "gcp:us-east4" }` in `wrangler.jsonc`. This is a single sample, not a guarantee.
 - Unsupported aspect ratios are silently ignored rather than rejected. Extreme ratios (`1:8`, `8:1`, `1:4`, `4:1`) work for text-to-image but are unreliable when editing an input image.
 - Input tokens, and so cost, grow with every `continue_from` round, since the history (including images) is counted as input again.
-- Not verified: isolation across API keys (using key B to reference key A's `file_id` or `interaction_id`), the error returned for a free-tier project, HEIC/HEIF input, uploads above 8 MB, and behavior when a safety filter returns no image. It has been exercised with raw JSON-RPC against local and deployed instances, but not yet with a real MCP client, and the default `*.workers.dev` hostname was not tested online.
+- Not verified: isolation across API keys (using key B to reference key A's `file_id` or `interaction_id`), the error returned for a free-tier project, HEIC/HEIF input, uploads above 8 MB, and behavior when a safety filter returns no image.
 
 ## Development
 

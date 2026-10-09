@@ -165,7 +165,7 @@ MCP 端点是 `https://<worker 名>.<你的子域>.workers.dev/mcp`。
 - 如果 Google 返回 `400 User location is not supported for the API use`,说明 Worker 跑在了不被支持的地区。有一次测试里固定 placement 后好了:在 `wrangler.jsonc` 里加 `"placement": { "region": "gcp:us-east4" }`。这只是一次样本,不是保证。
 - 不被支持的宽高比不会报错,而是被无声忽略。极端比例(`1:8`、`8:1`、`1:4`、`4:1`)文生图可用,带输入图编辑时不可靠。
 - 每多一轮 `continue_from`,输入 token 都会增加(历史和图片会被重新计入输入),费用也随之增加。
-- 未验证:不同 API key 之间的隔离(用 B 的 key 引用 A 的 `file_id` 或 `interaction_id`)、免费项目的 key 会报什么错、HEIC/HEIF 输入、超过 8 MB 的上传、被安全策略拦截时没有图片的响应形态。目前用原始 JSON-RPC 在本地和已部署的实例上测过,还没有用真实的 MCP 客户端连过,默认的 `*.workers.dev` 域名也没有在线上测过。
+- 未验证:不同 API key 之间的隔离(用 B 的 key 引用 A 的 `file_id` 或 `interaction_id`)、免费项目的 key 会报什么错、HEIC/HEIF 输入、超过 8 MB 的上传、被安全策略拦截时没有图片的响应形态。
 
 ## 开发
 
