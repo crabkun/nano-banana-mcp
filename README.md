@@ -37,8 +37,8 @@ The upload goes directly from the agent to Google, so the server never sees imag
 ## Deploy
 
 ```bash
-git clone https://github.com/crabkun/banana-pi.git
-cd banana-pi
+git clone https://github.com/crabkun/nano-banana-mcp.git
+cd nano-banana-mcp
 npm install
 
 # Generate a random 32-byte secret and store it as a Worker secret.

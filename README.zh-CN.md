@@ -37,8 +37,8 @@ Agent                         MCP 服务 (Worker)                   Google
 ## 部署
 
 ```bash
-git clone https://github.com/crabkun/banana-pi.git
-cd banana-pi
+git clone https://github.com/crabkun/nano-banana-mcp.git
+cd nano-banana-mcp
 npm install
 
 # 生成 32 字节随机密钥,存成 Worker secret。
