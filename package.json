@@ -1,0 +1,25 @@
+{
+  "name": "nano-banana-mcp",
+  "description": "Remote MCP server on Cloudflare Workers for Gemini Nano Banana image generation and editing (bring your own key, stateless)",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:local": "wrangler deploy -c wrangler.local.jsonc",
+    "types": "wrangler types",
+    "typecheck": "wrangler types && tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "0.24.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "typescript": "6.0.3",
+    "vitest": "5.0.3",
+    "wrangler": "4.146.0"
+  }
+}

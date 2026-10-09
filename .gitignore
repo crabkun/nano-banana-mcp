@@ -1,0 +1,10 @@
+node_modules/
+.wrangler/
+.dev.vars
+worker-configuration.d.ts
+*.log
+
+# Local-only files (personal deployment config, secrets)
+wrangler.local.jsonc
+.devin/*.local.json
+.smoke.env
